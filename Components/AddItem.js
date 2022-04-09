@@ -36,6 +36,7 @@ function AddItem(props) {
         value={yearM}
         onChangeText={onHandlerYearMateria}
         />
+     
        
     <Button title="Agregar" onPress={onHandlerAddItem}/>
   </View>

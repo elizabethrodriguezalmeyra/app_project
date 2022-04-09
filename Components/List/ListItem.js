@@ -1,15 +1,23 @@
-import React from 'react';
+import React  from 'react';
 import { 
-   
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
+    Button
   } from 'react-native';
+  import Card from '../Card';
 
+  function ListItem (props) { 
+  const { onHandlerModal, content, setInfo, handleRestart, data } = props
 
-function ListItem (props) { 
-  const { onHandlerModal, data} = props
+  function mostrarInfo(item, content, setInfo){
+    content(<Card titulo={"Esta Materia es"} item={item} handleRestart={handleRestart}/>);
+    setInfo(true);
+  
+  }
+  
+  
    
    return( 
    
@@ -17,8 +25,10 @@ function ListItem (props) {
                 <View style={styles.itemList}>
                     <Text>{data.item.value} - </Text>
                     <Text> Año cursada: {data.item.year}</Text>
+                    <Button title="Ver Info" onPress={()=>mostrarInfo(data.item, content, setInfo)}></Button>
                 </View>
             </TouchableOpacity>
+            
          
    );
   

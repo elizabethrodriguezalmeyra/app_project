@@ -6,16 +6,21 @@ import {
 import ModalItem  from './Components/ModalItem';
 import AddItem from './Components/AddItem';
 import Index from './Components/List/Index';
-import Header from './Components/Estructura/Header';
-import Footer from './Components/Estructura/Footer';
+import Header from './Components/Structs/Header';
+import Footer from './Components/Structs/Footer';
+import Card from './Components/Card'
 import './style';
 
 export default function App() {  
   const [ counter, setCounter ] = useState(3);
-  const [ listItem, setListItem ] = useState([{id:1, value:'Programación', year:'2' },{id:2, value:'Matemática', year:'1' }]);
+  const [ listItem, setListItem ] = useState([{id:1, value:'Programación', year:'2' },{id:2, value:'Matemática', year:'1'}]);
   const [ itemSelected, setItemSelected ] = useState({});
   const [ modalVisible, setModalVisible ] = useState(false);
-
+  const [content, setContent] = useState();
+  const [info, setInfo] = useState(false)
+  
+  
+  
   
   const onHandlerDelete = id => { 
       //console.log("Item " + itemSelected.value + " Eliminado");
@@ -43,16 +48,33 @@ export default function App() {
     
   }
   
-  
+  const handleRestart = () => {
+    setInfo(false)
+  }
+
+  let context
+    if(info){
+      context= content
+     
+      }
+      else{
+        context= <View style={styles.listItemContainer}>
+        <Index  onHandlerModal={onHandlerModal} content={setContent} setInfo={setInfo} handleRestart={handleRestart} itemList={listItem} ></Index>
+         <ModalItem onDelete={onHandlerDelete} item={itemSelected} visible={modalVisible} onCancel={closeModal}/>
+      </View>
+     
+      }
+       
+     // console.log(info);
   return (
     
     <View style={styles.container}>
       <Header style={styles.header} /> 
-      <AddItem onAddItem={agregarItem}/>      
+      <AddItem onAddItem={agregarItem}/>
       <View style={styles.listItemContainer}>
-        <Index itemList={listItem} onHandlerModal={onHandlerModal}></Index>
+      {context}
       </View>
-      <ModalItem onDelete={onHandlerDelete} item={itemSelected} visible={modalVisible} onCancel={closeModal}/>
+      
       <Footer />
     </View>
     
