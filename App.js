@@ -3,12 +3,13 @@ import {
   Text, 
   View, 
 } from 'react-native';
+import { useFonts } from "expo-font";
 import ModalItem  from './Components/ModalItem';
 import AddItem from './Components/AddItem';
 import Index from './Components/List/Index';
 import Header from './Components/Structs/Header';
 import Footer from './Components/Structs/Footer';
-import Card from './Components/Card'
+import AppLoading from "expo-app-loading";
 import './style';
 
 export default function App() {  
@@ -19,7 +20,14 @@ export default function App() {
   const [content, setContent] = useState();
   const [info, setInfo] = useState(false)
   
-  
+  const [loaded] = useFonts({
+    OpenSans: require('./assets/font/GrapeNuts-Regular.ttf'),
+    OpenSansBold: require('./assets/font/OpenSans-Bold.ttf'),
+    GrepeNuts: require('./assets/font/GrapeNuts-Regular.ttf'), 
+  })
+
+  //console.log("Render");
+  if(!loaded) return <AppLoading/>
   
   
   const onHandlerDelete = id => { 

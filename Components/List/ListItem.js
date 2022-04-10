@@ -7,6 +7,7 @@ import {
     Button
   } from 'react-native';
   import Card from '../Card';
+  import colors from '../../Constantes/color';
 
   function ListItem (props) { 
   const { onHandlerModal, content, setInfo, handleRestart, data } = props
@@ -25,7 +26,7 @@ import {
                 <View style={styles.itemList}>
                     <Text>{data.item.value} - </Text>
                     <Text> Año cursada: {data.item.year}</Text>
-                    <Button title="Ver Info" onPress={()=>mostrarInfo(data.item, content, setInfo)}></Button>
+                    <Button title="Ver Info" onPress={()=>mostrarInfo(data.item, content, setInfo)} color={colors.primary}></Button>
                 </View>
             </TouchableOpacity>
             

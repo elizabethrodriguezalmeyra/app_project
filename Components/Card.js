@@ -5,6 +5,7 @@ import {
     StyleSheet,
     Button
 } from 'react-native';
+import colors from '../Constantes/color';
 
 
 
@@ -16,11 +17,11 @@ function Card(props) {
             <Text> {titulo} </Text>
             <Text> {item.id} </Text>
             <Text> {item.value} </Text>
-            <Button title="Volver" onPress={handleRestart}></Button>
+            <Button title="Volver" onPress={handleRestart} color={colors.accent}></Button>
         </View>
        
     )
-}
+} 
 
 const styles = StyleSheet.create({
     inputContainer: {

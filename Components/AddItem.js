@@ -6,6 +6,7 @@ import {
     StyleSheet,
 
   } from 'react-native';
+  import colors from '../Constantes/color';
 
 function AddItem(props) {      
     const [ textItem, setTextItem ] = useState('');  
@@ -38,7 +39,7 @@ function AddItem(props) {
         />
      
        
-    <Button title="Agregar" onPress={onHandlerAddItem}/>
+    <Button title="Agregar" onPress={onHandlerAddItem} color={colors.light}/>
   </View>
   )
 }
