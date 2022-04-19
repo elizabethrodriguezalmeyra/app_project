@@ -24,7 +24,7 @@ function AddItem(props) {
     
 
     return (
-    <View style={styles.addItemContainer}>
+    <View >
     <TextInput 
         placeholder='Ingrese una Materia.' 
         style={styles.input}
