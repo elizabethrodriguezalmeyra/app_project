@@ -13,6 +13,8 @@ import AppLoading from "expo-app-loading";
 import './style';
 import ShopNavigator from './Navigation/ShopNavigator';
 import Perfil from './Screen/Perfil';
+import MainNavigator from './Navigation';
+
 
 export default function App() {  
   
@@ -27,22 +29,11 @@ export default function App() {
   if(!loaded) return <AppLoading/>
   
   
-  
-
-  
-  
- 
-
- /* 
-      }*/
-       
-     // console.log(info);
   return (
     
    
     
-    <ShopNavigator/>
-    
+    <MainNavigator/>
   );
 }
 

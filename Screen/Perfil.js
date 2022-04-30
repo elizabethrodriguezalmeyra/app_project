@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 function Perfil({navigation}) {
   return (
     <View style={styles.screen}>
-      <Text>Ver mi Perfil</Text>   
+      <Text>Ver mi Perfil holaaa</Text>   
       <Button title='Ir a Detalle' onPress={ () => {
           navigation.navigate('Informacion')
       }}/>    
