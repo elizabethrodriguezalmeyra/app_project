@@ -27,7 +27,7 @@ const ShopNavigator =  () => {
         }}
     >
 
-            <Stack.Screen name='Cursada' component={MateriasScreen} options={{title: 'Mis Cursadas'}} /> 
+            <Stack.Screen name='Cursada' component={MateriasScreen} options={{title: 'Mis Materias'}} /> 
             <Stack.Screen name='Materia' component={InfoMateria}   options={ ({route}) => ({title: route.params.name})}/> 
            
                
