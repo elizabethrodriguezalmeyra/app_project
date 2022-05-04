@@ -1,8 +1,8 @@
-import { MATERIAS } from "../../data/bbddmaterias";
+import { MateriasInscriptas } from "../../data/MateriasInscriptas";
 import { SELECT_MATERIA } from "../Actions/materias.action";
 
 const initialState =  {
-    materias : MATERIAS,
+    materias : MateriasInscriptas,
     selected: null
 }
 

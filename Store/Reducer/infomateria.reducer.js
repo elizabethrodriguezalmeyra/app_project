@@ -1,15 +1,15 @@
-import { MATERIAS } from "../../data/bbddmaterias";
-import { SELECT_MAT} from "../actions/infomat.action";
+import { MateriasInscriptas } from "../../data/MateriasInscriptas";
+import { SELECT_MAT} from "../Actions/infomat.action";
 
 const initialState =  {
 
-    materias : MATERIAS,
+    materias : MateriasInscriptas,
     filteredMat: [],
     selected: null
 }
 
 
-const InfoMateriaReducer = (state = initialState, action) => {
+const infomateriaReducer = (state = initialState, action) => {
     switch(action.type) {
         case SELECT_MAT:
             console.log("MAT " + action.matid );

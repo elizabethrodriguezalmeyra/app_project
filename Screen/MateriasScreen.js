@@ -17,11 +17,11 @@ function MateriasScreen({navigation}) {
   }
 
   const dispatch = useDispatch();
-  const MateriasInscriptas = useSelector(state=>state.materias)
-  consolelog('materiaScreen', MateriasInscriptas)
+  const MateriasInscriptas = useSelector(state=>state.materias).materias
+  console.log('materiaScreen', MateriasInscriptas)
 
   const renderGridItem = ({item}) => <GridItem item={item} onSelected={handledSelectedCategory}/>;
-
+  
   return (
     <FlatList 
       data={MateriasInscriptas}

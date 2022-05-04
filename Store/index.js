@@ -1,9 +1,9 @@
-import {createStore, combineReducer}  from 'redux';
+import {createStore, combineReducers}  from 'redux';
 
 import infomateriaReducer from './Reducer/infomateria.reducer';
 import materiaReducer from './Reducer/materia.reducer';
 
-const rootReducer = combineReducer({
+const rootReducer = combineReducers({
     materias: materiaReducer,
     infomat: infomateriaReducer
 })

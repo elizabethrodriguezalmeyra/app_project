@@ -2,12 +2,13 @@ import React, {useEffect} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import {MateriasInscriptas} from '../data/MateriasInscriptas'
 import { useSelector } from 'react-redux';
+import {selectMateriaInfo} from '../Store/Actions/infomat.action'
 
 
 
 function InfoMateria({navigation, route}) {
-  const materia = useSelector(state => state.materias.selected)
-
+  const materia = useSelector(state => state.materias)
+ // console.log(materia)  hasta aca llegue
     
     return (
         <View style={styles.container}>
