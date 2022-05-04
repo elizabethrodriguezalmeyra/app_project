@@ -12,7 +12,7 @@ const initialState =  {
 const infomateriaReducer = (state = initialState, action) => {
     switch(action.type) {
         case SELECT_MAT:
-            console.log("MAT " + action.matid );
+            console.log("Entra aca" );
             return {
                 ...state,
                 selected: state.materias.find( materia => materia.id === action.matid )

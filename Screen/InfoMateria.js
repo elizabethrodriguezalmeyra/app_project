@@ -1,14 +1,20 @@
 import React, {useEffect} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import {MateriasInscriptas} from '../data/MateriasInscriptas'
-import { useSelector } from 'react-redux';
-import {selectMateriaInfo} from '../Store/Actions/infomat.action'
+import { useSelector, useDispatch } from 'react-redux'; 
+import {selectMateria} from '../Store/Actions/materias.action'
 
 
 
 function InfoMateria({navigation, route}) {
-  const materia = useSelector(state => state.materias)
- // console.log(materia)  hasta aca llegue
+  const dispatch = useDispatch();  
+
+  useEffect( () => {
+    console.log("Screen: " + route.params.id);
+    dispatch(selectMateria(route.params.id));
+  }, [])
+  const materia = useSelector(state => state.materias.selected)
+  console.log("Entro aca", materia)  
     
     return (
         <View style={styles.container}>
@@ -16,9 +22,7 @@ function InfoMateria({navigation, route}) {
           <Text>Descripcion: {materia.description}</Text>
           <Text> Año: {materia.year}</Text>
         </View>
-      //   <View style={styles.screen}>
-      //   <Text>Bread Detail Screen</Text>      
-      // </View>
+    
       );
     }
     

@@ -7,14 +7,16 @@ const initialState =  {
 }
 
 const materiaReducer=(state= initialState, action) =>{
+    console.log("id",action.matid)
     switch (action.type){
         case SELECT_MATERIA:
             const IndexMateria = state.materias.findIndex(mat => mat.id === action.matid)
-        if(IndexMateria === -1)return state
-        return{...state, selected: state.materias(IndexMateria)}
+        if(IndexMateria === -1) return state
+        return{...state, selected: state.materias.find(mat => mat.id === action.matid)}
         default: 
             return state       
     }
+  
     
 }
 export default materiaReducer;

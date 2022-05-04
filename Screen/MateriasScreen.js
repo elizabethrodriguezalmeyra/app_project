@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button, FlatList } from 'react-native';
 //import { MateriasInscriptas } from '../data/MateriasInscriptas';
 import { useSelector, useDispatch } from 'react-redux';
 import GridItem from '../Components/GridItem';
-//import {selectMateria} from '../Store/Actions/materias.action'
+import {selectMateria} from '../Store/Actions/materias.action'
 
 
 function MateriasScreen({navigation}) {
@@ -18,7 +18,7 @@ function MateriasScreen({navigation}) {
 
   const dispatch = useDispatch();
   const MateriasInscriptas = useSelector(state=>state.materias).materias
-  console.log('materiaScreen', MateriasInscriptas)
+  //console.log('materiaScreen', MateriasInscriptas)
 
   const renderGridItem = ({item}) => <GridItem item={item} onSelected={handledSelectedCategory}/>;
   
