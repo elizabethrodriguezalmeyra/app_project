@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import {MateriasInscriptas} from '../data/MateriasInscriptas'
+import { useSelector } from 'react-redux';
+
+
 
 function InfoMateria({navigation, route}) {
-    const materia = MateriasInscriptas.filter( materia => materia.id === route.params.id)[0];
-    //console.log(materia)
+  const materia = useSelector(state => state.materias.selected)
+
+    
     return (
         <View style={styles.container}>
           <Text style={styles.title}>{materia.title}</Text>

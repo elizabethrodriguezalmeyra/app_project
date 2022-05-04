@@ -4,16 +4,11 @@ import {
   View, 
 } from 'react-native';
 import { useFonts } from "expo-font";
-import ModalItem  from './Components/ModalItem';
-import AddItem from './Components/AddItem';
-import Index from './Components/List/Index';
-import Header from './Components/Structs/Header';
-import Footer from './Components/Structs/Footer';
 import AppLoading from "expo-app-loading";
 import './style';
-import ShopNavigator from './Navigation/ShopNavigator';
-import Perfil from './Screen/Perfil';
 import MainNavigator from './Navigation';
+import { Provider } from 'react-redux';
+import store from './Store'
 
 
 export default function App() {  
@@ -31,9 +26,10 @@ export default function App() {
   
   return (
     
-   
+   <Provider store={store} >
     
     <MainNavigator/>
+    </Provider>
   );
 }
 
