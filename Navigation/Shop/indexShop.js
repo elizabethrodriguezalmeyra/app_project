@@ -1,16 +1,13 @@
 import React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import { COLORS } from '../../Constantes/color';
-//import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
+import { Platform, TouchableOpacity } from 'react-native'
+import { COLOR } from '../../Constantes';
 import MateriasScreen from '../../Screen/MateriasScreen';
 import MateriasInscScreen from '../../Screen/MateriasInscScreen';
 import Informacion from '../../Screen/Informacion';
-//import Perfil from '../../Screen/Perfil';
 import InfoMateria from '../../Screen/InfoMateria';
 import Perfil from '../../Screen/Perfil'
-//import { MateriasInscriptas } from '../../data/MateriasInscriptas';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,9 +16,9 @@ const ShopNavigator =  () => {
         <Stack.Navigator initialRouteName='Home'
         screenOptions={{
             headerStyle: {
-                backgroundColor: Platform.OS === 'android' ? COLORS.primary : '',                    
+                backgroundColor: Platform.OS === 'android' ? COLOR.DARK_SIENNA:'',                    
             },
-            headerTintColor: Platform.OS === 'android' ? 'white' : COLORS.primary,
+            headerTintColor: Platform.OS === 'android' ? 'white' : COLOR.DARK_SIENNA,
             headerTitleStyle: {
                 fontWeight: 'bold'
             }
