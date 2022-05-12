@@ -10,11 +10,11 @@ function InfoMateria({navigation, route}) {
   const dispatch = useDispatch();  
 
   useEffect( () => {
-    console.log("Screen: " + route.params.id);
+    //console.log("Screen: " + route.params.id);
     dispatch(selectMateria(route.params.id));
   }, [])
   const materia = useSelector(state => state.materias.selected)
-  console.log("Entro aca", materia)  
+  //console.log("Entro aca", materia)  
     
     return (
         <View style={styles.container}>

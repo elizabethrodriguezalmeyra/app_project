@@ -9,6 +9,7 @@ import MateriasInscScreen from '../../Screen/MateriasInscScreen';
 import Informacion from '../../Screen/Informacion';
 //import Perfil from '../../Screen/Perfil';
 import InfoMateria from '../../Screen/InfoMateria';
+import Perfil from '../../Screen/Perfil'
 //import { MateriasInscriptas } from '../../data/MateriasInscriptas';
 
 const Stack = createNativeStackNavigator();
@@ -27,13 +28,9 @@ const ShopNavigator =  () => {
         }}
     >
 
-            <Stack.Screen name='Cursada' component={MateriasScreen} options={{title: 'Mis Materias'}} /> 
-            <Stack.Screen name='Materia' component={InfoMateria}   options={ ({route}) => ({title: route.params.name})}/> 
-           
-               
-            <Stack.Screen name='Informacion' component={Informacion}
-               // options={ ({route}) => ({title: route.params.bread.name})}*/ 
-               />
+            <Stack.Screen name='Home' component={MateriasScreen} options={{title: 'Inicio'}} /> 
+            <Stack.Screen name='Materia' component={InfoMateria}   options={ ({route}) => ({title: route.params.name})}/>         
+            <Stack.Screen name='Perfil' component={Perfil}/>
         </Stack.Navigator>
 
     )
