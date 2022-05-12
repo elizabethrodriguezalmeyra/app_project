@@ -17,6 +17,7 @@ function MateriasScreen({navigation}) {
   }
 
   const dispatch = useDispatch();
+  dispatch(selectMateria(item.id));
   const MateriasInscriptas = useSelector(state=>state.materias).materias
   //console.log('materiaScreen', MateriasInscriptas)
 
