@@ -14,7 +14,7 @@ function InfoMateria({navigation, route}) {
     dispatch(selectMateria(route.params.id));
   }, [])
   const materia = useSelector(state => state.materias.selected)
-  //console.log("Entro aca", materia)  
+  console.log("Entro aca", materia)  
     
     return (
         <View style={styles.container}>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { View, Button, Image, Text, StyleSheet, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import * as Permission from 'expo-permissions';
-import { COLOR } from '../Constantes/color';
+//000import * as Permission from 'expo-permissions';
+import COLOR from '../Constantes/color'; 
 import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+
 
 const ImageSelector = (props) => {
     const [ pickerURI, setPickerURI ] = useState();
@@ -47,7 +48,7 @@ const ImageSelector = (props) => {
             </View>
             <Button
                 title="Tomar Foto"
-                color={COLOR.LIGTH_PINK}
+                color={ COLOR.LIGTH_PINK }
                 onPress={handlerTakeImage}/>
         </View>
     )
@@ -63,7 +64,6 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: COLOR.BLUSH,
         borderWidth: 1,
     },
     image: {

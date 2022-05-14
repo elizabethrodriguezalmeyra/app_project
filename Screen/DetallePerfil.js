@@ -1,4 +1,5 @@
 import React from 'react'
+import { View } from 'react-native';
 import Perfil from '../Components/Perfil'
 
 const DetallePerfil = () => {
@@ -7,12 +8,9 @@ const DetallePerfil = () => {
 
 
 return (
-    <Perfil
-    title={perfil.title}
-    image={perfil.image}
-    address="La Plata, Argentina"
-    onSelect={() => navigation.navigate('Detalle')}
-/>
+    <View>S</View>
+  
+
 
 )
 }

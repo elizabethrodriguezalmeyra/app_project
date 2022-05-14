@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { View, Text, StyleSheet, TextInput, ScrollView, Button } from 'react-native';
-import { COLOR } from '../Constantes/color';
-import { addPerfil } from '../store/perfil.actions';
-import ImageSelector from '../components/ImageSelector';
+import color from '../Constantes/color';
+import { addPerfil } from '../Store/Actions/perfil.action';
+import ImageSelector from '../Components/ImageSelector';
 
 const NuevoPerfil = ({navigation}) => {
     const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const NuevoPerfil = ({navigation}) => {
                 <Text style={styles.label}>Titulo</Text>
                 <TextInput style={styles.input} onChangeText={handlerTitleChange}/>
                 <ImageSelector onImage={handlerImageChange}/>
-                <Button title="Guardar Perfil" color={COLOR.MAROON} onPress={handlerSave}/>
+                <Button title="Guardar Perfil" color={color.MAROON} onPress={handlerSave}/>
             </View>
         </ScrollView>
     )

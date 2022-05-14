@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
-import { COLORS } from '../constants';
+import { color } from '../Constantes';
 
 const Perfil = ({ title, image, address, onSelect}) => {
     
@@ -9,7 +9,7 @@ const Perfil = ({ title, image, address, onSelect}) => {
             onPress={onSelect}
             style={styles.perfil}
         > 
-        {/* { isStatic:true, uri: 'image'} */}
+       
             <Image style={styles.image} source={{isStatic:true, uri: image,}}/>
             <View style={styles.info}>
                 <Text style={styles.title}>{title}</Text>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70,
         borderRadius: 35,
-        backgroundColor: COLORS.PEACH_PUFF
+        backgroundColor: color.PEACH_PUFF
     },
     info: {
         marginLeft: 25,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start'
     },
     title: {
-        color: COLORS.BLUSH,
+        color: COLOR.BLUSH,
         fontSize: 18,
         marginBottom: 6,
     },
