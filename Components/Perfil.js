@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
-import { color } from '../Constantes';
+import { COLOR } from '../Constantes';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Perfil = ({ title, image, address, onSelect}) => {
     
@@ -32,8 +33,8 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70,
         borderRadius: 35,
-        backgroundColor: color.PEACH_PUFF
-    },
+        backgroundColor: COLOR.PEACH_PUFF
+        },
     info: {
         marginLeft: 25,
         flex: 1,

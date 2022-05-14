@@ -3,15 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-
 import ShopNavigator from '../Shop/indexShop';
-//import CartNavigator from '../Cart/inde//';
+import PerfilNavigator from '../Perfil/PerfilNavigator';
 
 const BottomTabs = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return (
-        <BottomTabs.Navigator initialRouteName='shop' 
+        <BottomTabs.Navigator initialRouteName='ShopTab' 
             screenOptions={{
                 headerShown: false,
                 tabBarShowLabel: false, 
@@ -23,12 +22,22 @@ const TabNavigator = () => {
                     tabBarIcon: ({focused}) => (
                         <View style={styles.item}>
                             <Ionicons name="md-home" size={24} color="black" />
-                            <Text>Cursada</Text>
+                            <Text>INICIO</Text>
                         </View>
                     )
                 }}
             />
-          
+           <BottomTabs.Screen name='Perfil' component={PerfilNavigator}   //aca irian las vistas para manejar las materias que se tengan estados inscriptas
+                options={{
+                    tabBarIcon: ({focused}) => (
+                        <View style={styles.item}>
+                            <Ionicons name="heart" size={24} color="black" />
+                            <Text>Mi Perfil</Text>
+                        </View>
+                    )
+                }}
+            />
+            
         </BottomTabs.Navigator>
     )
 }

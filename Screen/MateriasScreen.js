@@ -8,12 +8,14 @@ import {selectMateria} from '../Store/Actions/materias.action'
 
 
 function MateriasScreen({navigation}) {
-
+  const dispatch = useDispatch();
   const handledSelectedCategory = (item) => {
+    dispatch(selectMateria(item.id)),
     navigation.navigate('Materia', {
       id: item.id,
       name: item.title
     })
+    
   }
 
   

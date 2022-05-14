@@ -6,7 +6,7 @@ export const ADD_PERFIL = 'ADD_PERFIL'
 export const addPerfil = (title, image) => {
     return async dispatch => {
         console.log("Dispatching...");
-        
+        //ver
         const fileName = image.split('/').pop();
         const Path = FileSystem.documentDirectory + fileName; 
         console.log('------------------------------------');

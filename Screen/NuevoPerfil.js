@@ -21,7 +21,7 @@ const NuevoPerfil = ({navigation}) => {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Text style={styles.label}>Titulo</Text>
+                <Text style={styles.label}>Cargar Nuevo Peril</Text>
                 <TextInput style={styles.input} onChangeText={handlerTitleChange}/>
                 <ImageSelector onImage={handlerImageChange}/>
                 <Button title="Guardar Perfil" color={color.MAROON} onPress={handlerSave}/>

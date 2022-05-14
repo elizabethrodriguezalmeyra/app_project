@@ -9,17 +9,18 @@ function PerfilNavigator  (){
 
     return (
     <PerfilStack.Navigator >
+           
             <PerfilStack.Screen
+                name="Cargar Perfil"
+                component={NuevoPerfil}
+                options={{title: 'Nuevo Perfil'}} 
+            />
+             <PerfilStack.Screen
                 name="Detalle"
                 component={DetallePerfil}
                 options={{title: 'Detalle Perfil'}} 
             />
-            <PerfilStack.Screen
-                name="Nuevo"
-                component={NuevoPerfil}
-                options={{title: 'Nuevo Perfil'}} 
-            />
-
+     
     </PerfilStack.Navigator>
     )
 }

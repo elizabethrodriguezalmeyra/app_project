@@ -1,15 +1,20 @@
 import React from 'react'
-import { View } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
 import Perfil from '../Components/Perfil'
 
 const DetallePerfil = () => {
 
-    let perfil = useSelector(state => state.perfil);
-
-
+    let perfil = [{title: "Hola", imagen:""}]
+    
 return (
-    <View>S</View>
-  
+
+    <Perfil
+    title={perfil.title}
+    image={perfil.image}
+    address="La Plata, Argentina"
+
+/>
+   
 
 
 )

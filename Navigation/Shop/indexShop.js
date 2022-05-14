@@ -14,11 +14,9 @@ const Plataforma = createNativeStackNavigator();
 const ShopNavigator =  () => {
     return  (
         <Plataforma.Navigator initialRouteName='Nuevo'
-        
     >
-
             <Plataforma.Screen 
-                name='Home'
+                name='HOME'
                 component={MateriasScreen} 
                 options={{title: 'Inicio'}} /> 
 
@@ -27,17 +25,7 @@ const ShopNavigator =  () => {
                 component={InfoMateria}  
                 options={ ({route}) => ({title: route.params.name})}/>   
 
-            <Plataforma.Screen
-                name="Detalle"
-                component={DetallePerfil}
-                options={{title: 'Detalle Perfil'}} 
-            />
-            <Plataforma.Screen
-                name="Nuevo"
-                component={NuevoPerfil}
-                options={{title: 'Nuevo Perfil'}} 
-            />
-
+            
         </Plataforma.Navigator>
 
     )
