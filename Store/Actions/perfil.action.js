@@ -2,7 +2,7 @@ import * as FileSystem from 'expo-file-system';
 
 export const ADD_PERFIL = 'ADD_PERFIL'
 
-
+//-------------------!!! voy por aca, tengo que crear el FIREBASE y thuunk para poder guardarlo, segun mi creeencia!!!!!!!!!!! 
 export const addPerfil = (title, image) => {
     return async dispatch => {
         console.log("Dispatching...");
